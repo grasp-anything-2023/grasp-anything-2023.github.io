@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Grasp-Anything: Large-scale Grasp Dataset from Foundation Models">
+  <meta name="keywords" content="visual navigation,embodied AI,human dynamics model, deep reinforcement learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="./static/images/habicrowd.png"/>
+  <link rel="image_src" href="./static/images/habicrowd.png">
+  <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/habicrowd.ico"/>
+
+  <title>HabiCrowd: A High Performance Simulator for Crowd-Aware Visual Navigation
+    Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EDF010G6PN');
+
+
+  </script>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Grasp-Anything: Large-scale Grasp Dataset from Foundation Models
+        </h1>
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://github.com/habicrowd/HabiCrowd"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            <!-- Dataset Link. -->
+            <span class="link-block">
+              <a href="https://github.com/habicrowd/HabiCrowd/tree/main/dataset"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data</span>
+                </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="wrapper"> 
+        <video id="teaser_4" autoplay controls muted loop playsinline width="32%" height="100%"> 
+            <source type="video/mp4" src="static/images/scene_1.mp4" /> 
+        </video>
+        <video id="teaser_2" autoplay controls muted loop playsinline width="32%" height="100%"> 
+          <source type="video/mp4" src="static/images/scene_3.mp4" /> 
+        </video>
+        <video id="teaser_3" autoplay controls muted loop playsinline width="32%" height="100%"> 
+            <source type="video/mp4" src="static/images/scene_2.mp4" /> 
+        </video>
+        <div class="clear"></div> 
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <i>HabiCrowd</i>, a new dataset and benchmark for crowd-aware visual navigation that surpasses other benchmarks in terms of human diversity and computational utilization.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Visual navigation, a foundational aspect of Embodied AI (E-AI), has been
+            significantly studied in the past few years. While many 3D simulators have
+            been introduced to support visual navigation tasks, scarcely works have
+            been directed towards combining human dynamics, creating the gap between
+            simulation and real-world applications. Furthermore, current 3D simulators
+            incorporating human dynamics have several limitations, particularly in
+            terms of computational efficiency, which is a promise of E-AI simulators.
+            To overcome these shortcomings, we introduce HabiCrowd, the first standard
+            benchmark for crowd-aware visual navigation that integrates a crowd
+            dynamics model with diverse human settings into photorealistic environments. Empirical evaluations demonstrate that our proposed human dynamics model achieves state-of-the-art performance in collision avoidance, while exhibiting superior computational efficiency compared to its counterparts. We leverage HabiCrowd to conduct several comprehensive studies on crowd-aware visual navigation tasks and human-robot interactions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contributions</h2>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <p>
+          <i>UPL++</i>, our proposed human dynamics model achieve collision-free, while
+        significantly outperforms computational time of state-of-the-art human dynamics
+        model of iGibson-SN (ORCA).
+        </p>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <img style="width: 80%;" src="./static/images/comparison.svg" alt="Comparison with related human dynamics model."/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Furthermore, our simulator shows remarkable computational utilization over related benchmarks.
+          The rendering speed is approximately two times faster than Isaac Sim, approximately three times faster than iGibson-SN
+          while RAM utilizations is approximately six times smaller than Isaac Sim. We also achieve wider
+          range of human diversity. More information can be found in our paper.
+        </p>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <img style="width: 80%;" src="./static/images/simulator.svg"
+                  alt="Comparison with related benchmarks."/>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
+          <source src="./static/images/upl++.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-centered">
+        <p>
+          An example of our human dynamics UPL++ projected on 2D floor plan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Crowd-aware Visual Navigation</h2>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
+          <source src="./static/images/scene_0_promt.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Utilizing HabiCrowd, we benchmark two tasks: point-goal and object-goal navigation.
+          We benchmark five state-of-the-art baselines on both crowd-aware navigation (robotics)
+          and egocentric-based (computer vision) literature.
+        </p>
+      </div>
+      <img style="width: 90%;" src="./static/images/benchmarking.svg"
+                 alt="Comparison with related human dynamics model."/>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>We borrow github page from <a href="https://hypernerf.github.io/">HyperNeRF</a>. Special thanks to them!
+  </div>
+</section>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
